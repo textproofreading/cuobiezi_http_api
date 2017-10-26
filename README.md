@@ -27,6 +27,15 @@ cuobiezi http api
 
 	返回 json 格式的结果：
 	{"Cases":[{"Error":"中国人民共和国","Tips":"中华人民共和国","Sentence":"中国人民共和国下半年上世纪将在微信账户钱包帐户的“九宫格”中开设快速的笑着保险入口，","ErrInfo":"","Pos":4}]}
+	
+	
+	json 结果说明：
+	Error 是错误词
+	Tips 是正确词语
+	Sentence 是错误词与所在的句子
+	Pos 是错误词在文章中的位置
+	其他是测试字段，未来会取消
+
 
 
 
