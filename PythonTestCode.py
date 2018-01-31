@@ -3,7 +3,11 @@
 import requests,json
 
 '''
-url = 'http://117.121.10.43:8234/spellcheck/json_check/json_phrase'
+
+pip install request
+
+
+url = 'http://api.CuoBieZi.net/spellcheck/json_check/json_phrase'
 
 字段一："content", 填写需要检查的文字内容
 字段二："mode", 固定值，填写："advanced"  预留参数，固定值
@@ -21,17 +25,15 @@ Pos 是错误词在文章中的位置
 
 '''
 
-
 msg_str = "漏字： 中华人民共和这根邮寄达老旧烟囱已走到生命进头，她的离去让哦们很悲伤， 中华人民共和台万第二大金融控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。 "
 payload = {
     "content" : msg_str,
     "mode": "advanced",
+    "username" : "tester",
     "biz_type": "show"
 }
 
-
-
-url = 'http://117.121.10.43:8234/spellcheck/json_check/json_phrase'
+url = 'http://api.CuoBieZi.net/spellcheck/json_check/json_phrase'
 
 headers = {'content-type': 'application/json'}
 

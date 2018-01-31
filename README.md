@@ -2,28 +2,23 @@
 cuobiezi http api
 
 
-
-
-
-
-
 采用 json 方式 post 提交数据， linux  命令行模式 ，使用 curl 提交数据：
 
-
-	URL="http://117.121.10.43:8234/spellcheck/json_check/json_phrase"
+	URL="http://api.CuoBieZi.net/spellcheck/json_check/json_phrase"
 
 	curl -X POST --header "Content-Type: application/json" --header "Accept: application/json;charset=utf-8" -d "{
 	\"content\": \"腾讯今年中国人民共和国下半年上世纪将在微信账户钱包帐户的“九宫格”中开设快速的笑着保险入口，并上线保险产品。台万第二大金融控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。\",
 	\"mode\": "advanced",
+	\"username\": "tester",
 	\"biz_type\": \"show\"
 	}"  $URL
-
 
 
 
 	字段一："content", 填写需要检查的文字内容
 	字段二："mode", 固定值，填写："advanced"
 	字段三："biz_type", 固定值，填写："show"
+	字段四："username", 固定值，填写："tester"
 
 	返回 json 格式的结果：
 	{"Cases":[{"Error":"中国人民共和国","Tips":"中华人民共和国","Sentence":"中国人民共和国下半年上世纪将在微信账户钱包帐户的“九宫格”中开设快速的笑着保险入口，","ErrInfo":"","Pos":4}]}
@@ -43,12 +38,13 @@ cuobiezi http api
 
 	$ cat jcjc_test.sh 
 	#!/bin/bash
-	URL="http://117.121.10.43:8234/spellcheck/json_check/json_phrase"
+	URL="http://api.CuoBieZi.net/spellcheck/json_check/json_phrase"
 
 
 	curl -X POST --header "Content-Type: application/json" --header "Accept: application/json;charset=utf-8" -d "{
 	\"content\": \"腾讯今年中国人民共和国下半年上世纪将在微信账户钱包帐户的“九宫格”中开设快速的笑着保险入口，并上线保险产品。台万第二大金融控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。\",
 	\"mode\": \"advanced\",
+	\"username\": \"tester\",
 	\"biz_type\": \"show\"
 	}"  $URL
 
@@ -67,6 +63,7 @@ cuobiezi http api
 	$jsonData = array(
 	    'content' => '腾讯今年中国人民共和国下半年上世纪将在微信账户钱包帐户的“九宫格”中开设快速的笑着保险入口，并上线保险产品。',
 	    'mode' => 'advanced',
+	    'username' => 'tester',
 	    'biz_type' =>  'show'
 	);
 
@@ -94,15 +91,6 @@ cuobiezi http api
 
 
 =================================== 上面是一个 php  脚本例子 =========================================
-
-
-
-
-
-
-
-
-
 
 
 错别字网 CuoBieZi.net 的API调用说明：
