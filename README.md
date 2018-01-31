@@ -2,9 +2,7 @@
 cuobiezi http api
 
 
-
 采用 json 方式 post 提交数据， linux  命令行模式 ，使用 curl 提交数据：
-
 
 	URL="http://api.CuoBieZi.net/spellcheck/json_check/json_phrase"
 
@@ -14,7 +12,6 @@ cuobiezi http api
 	\"username\": "tester",
 	\"biz_type\": \"show\"
 	}"  $URL
-
 
 
 
