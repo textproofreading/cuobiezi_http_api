@@ -74,7 +74,7 @@ cuobiezi http api
 
 	    //Send the JSON data to the right server
 	    $ch = curl_init();
-	    curl_setopt($ch, CURLOPT_URL, "http://117.121.10.43:8234/spellcheck/json_check/json_phrase");
+	    curl_setopt($ch, CURLOPT_URL, "http://api.CuoBieZi.net/spellcheck/json_check/json_phrase");
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	    curl_setopt($ch, CURLOPT_POST, 1);
 	    curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json; charset=utf-8"));
