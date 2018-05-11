@@ -25,12 +25,16 @@ Pos 是错误词在文章中的位置
 
 '''
 
-msg_str = "漏字： 中华人民共和这根邮寄达老旧烟囱已走到生命进头，她的离去让哦们很悲伤， 中华人民共和台万第二大金融控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。 "
+msg_str = "漏字： 中国人民共和国这根邮寄达老旧烟囱已走到生命进头，她的离去让哦们很悲伤， 中华人民共和台万第二大金融控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。 "
 payload = {
     "content" : msg_str,
     "mode": "advanced",
     "username" : "tester",
-    "biz_type": "show"
+    "biz_type": "show",
+    "is_return_sentence": True,
+    "lets_kill_them_all": True , # 严格模式，误判会多
+    "check_sensitive_word":True, # 检查敏感词
+
 }
 
 url = 'http://api.CuoBieZi.net/spellcheck/json_check/json_phrase'
