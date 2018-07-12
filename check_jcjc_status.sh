@@ -1,11 +1,7 @@
 #!/bin/bash
 
 
-#### change address 
-JCJCHOST="api.CuoBieZi.net"  # debug addr "127.0.0.1:8235"
-
-
-URL="http://${JCJCHOST}/spellcheck/json_check/json_phrase"
+URL="http://127.0.0.1:8235/status/list"
 
 
 curl  --noproxy "*"   -X POST --header "Content-Type: application/json" --header "Accept: application/json;charset=utf-8" -d "{
@@ -14,10 +10,6 @@ curl  --noproxy "*"   -X POST --header "Content-Type: application/json" --header
 \"username\": \"tester\",
 \"biz_type\": \"show\"
 }"  $URL
-
-
-
-
 
 
 
