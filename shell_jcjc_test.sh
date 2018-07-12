@@ -1,6 +1,11 @@
 #!/bin/bash
-URL="http://127.0.0.1:8235/spellcheck/json_check/json_phrase"
-URL="http://api.CuoBieZi.net/spellcheck/json_check/json_phrase"
+
+
+#### change address 
+JCJCHOST="api.CuoBieZi.net"  # debug addr "127.0.0.1:8235"
+
+
+URL="http://${JCJCHOST}/spellcheck/json_check/json_phrase"
 
 
 curl  --noproxy "*"   -X POST --header "Content-Type: application/json" --header "Accept: application/json;charset=utf-8" -d "{
