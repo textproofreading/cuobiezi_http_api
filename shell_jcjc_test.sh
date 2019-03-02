@@ -6,6 +6,7 @@ JCJCHOST="api.CuoBieZi.net"  # debug addr "127.0.0.1:8235"
 JCJCHOST="127.0.0.1:8235"
 
 
+
 URL="http://${JCJCHOST}/spellcheck/json_check/json_phrase"
 
 
@@ -15,6 +16,9 @@ curl  --noproxy "*"   -X POST --header "Content-Type: application/json" --header
 \"username\": \"tester\",
 \"biz_type\": \"show\"
 }"  $URL
+
+
+
 
 
 
