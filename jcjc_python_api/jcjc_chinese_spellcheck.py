@@ -28,11 +28,36 @@ Pos 是错误词在文章中的位置
 '''
 
 def call_jcjc_chinese_spellcheck():
+    '''
+    在线SaaS需要开通帐号后才能使用，
+
+
+
+
+    程序员不欺负程序员！
+
+    谢谢大家支持！
+
+    田春峰　　weibo.com/TianChunFeng
+    :return:
+    '''
+
+    msg_str = '''
+        这是一个奇怪的逻辑：　
+        感冒了，买几片感冒药，如果不见效，就会换其他感冒药或者看医生；　
+        如果花钱买了软件，没有达到预期，就会...
+
+    '''
+
     msg_str = "漏字： 这根邮寄达老旧烟囱已走到生命进头，她的离去让哦们很悲伤， 中华人民共和台万第二大国家主席近平金融中国人民共和国控股公司富邦金控已与腾讯谈成合作，上述保险产品将由富邦金控旗下内地子公司富邦财险开发或引进。 "
+
+
     payload = {
         "content" : msg_str,
         "mode": "advanced",
-        "username" : "tester",
+        # todo  请自信查看本行信息
+        "username" : "需要开通权限后的帐号才能使用", #todo  请自信查看本行信息
+        # todo  请自信查看本行信息
         "biz_type": "show",
         "is_return_sentence": True,
         "lets_kill_them_all": True , # 严格模式，误判会多

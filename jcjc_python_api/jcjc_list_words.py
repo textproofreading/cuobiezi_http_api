@@ -7,6 +7,23 @@ from jcjc_python_api import host_and_port
 
 
 def call_jcjc_list_words_api():
+    '''
+    在线SaaS用户　，　不提供　添加新词功能．
+
+    主要是因为：　有些用户　随意属于一些字符串，　会影响线上系统的稳定性！
+
+    还有一些竞争对手，直接用来测试，抓取本系统，　我们也是迫于无奈，就关闭了本功能．
+
+    程序员不欺负程序员！
+
+    谢谢大家支持！
+
+    田春峰　　weibo.com/TianChunFeng
+
+
+
+    :return:
+    '''
     msg_str = ""
     payload = {
         "content" : msg_str,
